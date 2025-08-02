@@ -1,9 +1,10 @@
 import requests
 import os
+import streamlit as st
 
 
 # Replace with your actual OpenRouter API key
-OPENROUTER_API_KEY = os.getenv("openrouter_ai_key")
+OPENROUTER_API_KEY = st.secrets["openrouter_ai_key"]
 
 
 def get_llm_diet_feedback(nutrition_data, user_diet_description):
@@ -31,7 +32,7 @@ No follow up questions""".strip()
     }
 
     payload = {
-        "model": "google/gemma-3-12b-it:free",
+        "model": "google/gemma-3-4b-it:free",
         "messages": [
             {
                 "role": "user",
