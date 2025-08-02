@@ -2,8 +2,8 @@ import requests, base64, os, json
 import streamlit as st
 
 # Replace with your actual OpenRouter API key
-OPENROUTER_API_KEY = st.secrets["openrouter_ai_key"]
-
+# OPENROUTER_API_KEY = st.secrets["openrouter_ai_key"]
+OPENROUTER_API_KEY = os.getenv("openrouter_ai_key")
 
 def get_food_items_from_image(image_path):
     if not os.path.exists(image_path):
