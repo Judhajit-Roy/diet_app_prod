@@ -18,7 +18,7 @@ def get_food_items_from_image(image_path):
     }
 
     payload = {
-        "model": "google/gemma-3-4b-it:free",  # Gemma-3B via OpenRouter
+        "model": "google/gemma-3-12b-it:free",  # Gemma-3B via OpenRouter
         "messages": [
             {
                 "role": "system",
