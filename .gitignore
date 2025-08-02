@@ -1,3 +1,4 @@
 /foodimage1.png
 /foodimage2.png
 /__pycache__
+.streamlit/secrets.toml
